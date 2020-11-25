@@ -81,12 +81,13 @@ extension SignUpViewController {
         view.addSubview(signUpButton)
         
         NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 108),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            singUpStackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 177),
+            //singUpStackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 177),
+            singUpStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             singUpStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             singUpStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
@@ -140,16 +141,3 @@ struct SignUpVCProvider: PreviewProvider {
         }
     }
 }
-
-
-//extension UIViewController {
-//    
-//    func showAlert(with title: String, and message: String, completion: @escaping () -> Void = { }) {
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-//            completion()
-//        }
-//        alertController.addAction(okAction)
-//        present(alertController, animated: true, completion: nil)
-//    }
-//}

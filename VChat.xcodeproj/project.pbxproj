@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E108DEEBE6226E2409D9A67 /* Pods_VChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F550159F2B62E37A001C440 /* Pods_VChat.framework */; };
+		48C92213256B932F00AAB85B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48C92212256B932F00AAB85B /* GoogleService-Info.plist */; };
 		6A0C9F0F25386926008E2499 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C9F0E25386926008E2499 /* MMessage.swift */; };
 		6A0C9F12253B1286008E2499 /* WaitingChatsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C9F11253B1286008E2499 /* WaitingChatsNavigation.swift */; };
 		6A0C9F31253B4332008E2499 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C9F30253B4332008E2499 /* ChatsViewController.swift */; };
@@ -47,7 +48,6 @@
 		6AA56C54253489A9005785BC /* InsertasbleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56C53253489A9005785BC /* InsertasbleTextField.swift */; };
 		6AA56C5725348E23005785BC /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56C5625348E23005785BC /* UIView + Extension.swift */; };
 		6AA56C5A253495F7005785BC /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56C59253495F7005785BC /* ChatRequestViewController.swift */; };
-		6AA56C7725358E79005785BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AA56C7625358E79005785BC /* GoogleService-Info.plist */; };
 		6AA56C8D2535969C005785BC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56C8C2535969C005785BC /* AuthService.swift */; };
 		6AA56C9025359FD6005785BC /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56C8F25359FD6005785BC /* Validators.swift */; };
 		6AA56CAC2535A495005785BC /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56CAB2535A495005785BC /* AuthError.swift */; };
@@ -62,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		39E5CE3ABB2F1A41E509C1C6 /* Pods-VChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VChat.debug.xcconfig"; path = "Target Support Files/Pods-VChat/Pods-VChat.debug.xcconfig"; sourceTree = "<group>"; };
+		48C92212256B932F00AAB85B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A0C9F0E25386926008E2499 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		6A0C9F11253B1286008E2499 /* WaitingChatsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigation.swift; sourceTree = "<group>"; };
 		6A0C9F30253B4332008E2499 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		6AA56C53253489A9005785BC /* InsertasbleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertasbleTextField.swift; sourceTree = "<group>"; };
 		6AA56C5625348E23005785BC /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		6AA56C59253495F7005785BC /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
-		6AA56C7625358E79005785BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AA56C8C2535969C005785BC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6AA56C8F25359FD6005785BC /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		6AA56CAB2535A495005785BC /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				6AA56BC3252DFC6E005785BC /* Assets.xcassets */,
 				6AA56BC5252DFC6E005785BC /* LaunchScreen.storyboard */,
 				6AA56BC8252DFC6E005785BC /* Info.plist */,
-				6AA56C7625358E79005785BC /* GoogleService-Info.plist */,
+				48C92212256B932F00AAB85B /* GoogleService-Info.plist */,
 			);
 			path = VChat;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 			files = (
 				6AA56BC7252DFC6E005785BC /* LaunchScreen.storyboard in Resources */,
 				6AA56BC4252DFC6E005785BC /* Assets.xcassets in Resources */,
-				6AA56C7725358E79005785BC /* GoogleService-Info.plist in Resources */,
+				48C92213256B932F00AAB85B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -73,14 +73,14 @@ extension AuthViewController {
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 140),
-        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
+            logoImageView.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: -100),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 140),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60)
         ])
     }
 }

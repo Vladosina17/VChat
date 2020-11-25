@@ -10,7 +10,7 @@ import UIKit
 class ChatRequestViewController: UIViewController {
     
     let containerView = UIView()
-    let imageView = UIImageView(image: #imageLiteral(resourceName: "human2"), contentMode: .scaleAspectFill)
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFill)
     let nameLabel = UILabel(text: "Peter Ben", font: .systemFont(ofSize: 27, weight: .bold))
     let aboutMeLabel = UILabel(text: "You have the opportunity to chat with the best man in the world!", font: .systemFont(ofSize: 17, weight: .regular))
     let acceptButton = UIButton(title: "Accept", titleColor: .white, backgroundColor: .buttonViolet())
@@ -119,7 +119,6 @@ extension ChatRequestViewController {
             buttonsStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -48),
             buttonsStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             buttonsStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
-            //buttonsStackView.heightAnchor.constraint(equalToConstant: 56)
         ])
     }
 }

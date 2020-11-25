@@ -52,7 +52,7 @@ class UserCell: UICollectionViewCell, SelfConfiguringCell {
         userImageView.translatesAutoresizingMaskIntoConstraints = false
         userName.translatesAutoresizingMaskIntoConstraints = false
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        userImageView.backgroundColor = .red
+        userImageView.backgroundColor = .lightGray
         
         addSubview(containerView)
         containerView.addSubview(userImageView)

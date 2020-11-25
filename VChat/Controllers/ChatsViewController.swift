@@ -22,9 +22,7 @@ class ChatsViewController: MessagesViewController {
         self.user = user
         self.chat = chat
         super.init(nibName: nil, bundle: nil)
-        
         title = chat.friendUsername
-       
     }
     
     required init?(coder: NSCoder) {
@@ -78,8 +76,12 @@ class ChatsViewController: MessagesViewController {
                 self.showAlert(with: "Ошибка", and: error.localizedDescription)
             }
         })
-        
-        messagesCollectionView.scrollToBottom()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        messagesCollectionView.scrollToBottom(animated: true)
     }
     
     private func insertNewMessage(message: MMessage) {
@@ -102,12 +104,7 @@ class ChatsViewController: MessagesViewController {
     @objc private func cameraButtonPressed() {
         let picker = UIImagePickerController()
         picker.delegate = self
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.sourceType = .camera
-        } else {
-            picker.sourceType = .photoLibrary
-        }
+        picker.sourceType = .photoLibrary
         present(picker, animated: true, completion: nil)
     }
     
@@ -150,8 +147,9 @@ extension ChatsViewController {
         messageInputBar.backgroundView.backgroundColor = .mainWhite()
         messageInputBar.inputTextView.backgroundColor = .white
         messageInputBar.inputTextView.placeholderTextColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
-        messageInputBar.inputTextView.textContainerInset = UIEdgeInsets(top: 14, left: 30, bottom: 14, right: 36)
-        messageInputBar.inputTextView.placeholderLabelInsets = UIEdgeInsets(top: 14, left: 36, bottom: 14, right: 36)
+        messageInputBar.inputTextView.placeholder = "Message"
+        messageInputBar.inputTextView.textContainerInset = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 36)
+        messageInputBar.inputTextView.placeholderLabelInsets = UIEdgeInsets(top: 14, left: 20, bottom: 14, right: 36)
         messageInputBar.inputTextView.layer.borderColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 0.4033635232)
         messageInputBar.inputTextView.layer.borderWidth = 0.2
         messageInputBar.inputTextView.layer.cornerRadius = 18.0

@@ -12,11 +12,8 @@ class LoginViewController: UIViewController {
     
     let welcomeLabel = UILabel(text: "Welcome back!", font: .systemFont(ofSize: 25))
 
-    
     let emailTextField = OneLineTextField(placeholder: "E-mail")
     let passwordTextField = SecureTextField(placeholder: "Password")
-
-//    let passwordTextField = OneLineTextField(isSecure: true, placeholder: "Password")
     
     let signUpButton = UIButton(title: "Need an account", titleColor: .buttonViolet())
     let googleButton = UIButton(title: "Login with Google", titleColor: .buttonViolet())

@@ -16,6 +16,7 @@ class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
+        friendNameLabel.textAlignment = .center
         friendImageView.layer.cornerRadius = 28
         friendImageView.clipsToBounds = true
         

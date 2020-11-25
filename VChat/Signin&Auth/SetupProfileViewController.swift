@@ -111,18 +111,18 @@ extension SetupProfileViewController {
         ])
         
         NSLayoutConstraint.activate([
-            fullImageView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 107),
+            fullImageView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 60),
             fullImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            informStackView.topAnchor.constraint(equalTo: fullImageView.bottomAnchor, constant: 88),
+            informStackView.topAnchor.constraint(equalTo: fullImageView.bottomAnchor, constant: 40),
             informStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             informStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([
-            sexStackView.topAnchor.constraint(equalTo: informStackView.bottomAnchor, constant: 78),
+            sexStackView.bottomAnchor.constraint(equalTo: goToChatsButton.topAnchor, constant: -48),
             sexStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             sexStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])

@@ -22,6 +22,12 @@ class SecureTextField: UITextField {
         backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.9568627451, blue: 0.9568627451, alpha: 1)
         isSecureTextEntry = true
         
+        if #available(iOS 12, *) {
+            textContentType = .oneTimeCode
+        } else {
+            textContentType = .init(rawValue: "")
+        }
+        
         let button = UIButton()
         let image = UIImage(systemName: "eye.fill")
         button.setImage(image, for: .normal)

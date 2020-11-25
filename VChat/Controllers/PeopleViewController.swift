@@ -50,7 +50,7 @@ class PeopleViewController: UIViewController {
         setupCollectionView()
         createDataSource()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "logout"), style: .plain, target: self, action: #selector(signOut))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "exit"), style: .plain, target: self, action: #selector(signOut))
         navigationItem.rightBarButtonItem?.tintColor = .buttonViolet()
         
         usersListener = ListenerService.shared.usersObserve(users: users, completion: { (result) in
