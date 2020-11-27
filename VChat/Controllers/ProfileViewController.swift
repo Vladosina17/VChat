@@ -34,12 +34,10 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
-        myTextField.delegate = self
-        
         constomizeElements()
         setupConstraints()
         
+        myTextField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -67,16 +65,15 @@ class ProfileViewController: UIViewController {
         guard let message = myTextField.text, message != "" else { return }
         
         self.dismiss(animated: true) {
-            FirestoreService.shared.createWaitingChat(message: message, receiver: self.user) { (result) in
+            FirestoreService.shared.createActiveChat(message: message, receiver: self.user) { (result) in
                 switch result {
-                    
-                case .success:
+                
+                case .success():
                     UIApplication.getTopViewController()?.showAlert(with: "Успешно!", and: "Ваше сообщение для \(self.user.username) было отправлено.")
                 case .failure(let error):
                     UIApplication.getTopViewController()?.showAlert(with: "Ошибка", and: error.localizedDescription)
                 }
             }
-            
         }
     }
 }

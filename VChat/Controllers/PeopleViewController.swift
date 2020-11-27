@@ -22,7 +22,7 @@ class PeopleViewController: UIViewController {
         func description(usersCount: Int) -> String {
             switch self {
             case .users:
-                return "\(usersCount) people on Vchat"
+                return "\(usersCount) people on VChat"
             }
         }
     }

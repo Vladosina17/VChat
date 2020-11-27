@@ -17,7 +17,7 @@ struct ImageItem: MediaItem {
 }
 
 struct MMessage: Hashable, MessageType {
-   
+    
     let content: String
     var sender: SenderType
     var sentDate: Date
@@ -36,7 +36,7 @@ struct MMessage: Hashable, MessageType {
         }
     }
     
-    var image: UIImage? =  nil
+    var image: UIImage? = nil
     var downloadURL: URL? = nil
     
     init(user: MUser, content: String) {
@@ -59,7 +59,6 @@ struct MMessage: Hashable, MessageType {
         guard let sentDate = data["created"] as? Timestamp else { return nil }
         guard let senderId = data["senderID"] as? String else { return nil }
         guard let senderName = data["senderName"] as? String else { return nil }
-//        guard let content = data["content"] as? String else { return nil }
         
         self.id = document.documentID
         self.sentDate = sentDate.dateValue()
@@ -80,7 +79,7 @@ struct MMessage: Hashable, MessageType {
         var rep: [String: Any] = [
             "created": sentDate,
             "senderID": sender.senderId,
-            "senderName": sender.displayName,
+            "senderName": sender.displayName
         ]
         
         if let url = downloadURL {
@@ -99,7 +98,6 @@ struct MMessage: Hashable, MessageType {
         return lhs.messageId == rhs.messageId
     }
 }
-
 
 extension MMessage: Comparable {
     static func < (lhs: MMessage, rhs: MMessage) -> Bool {

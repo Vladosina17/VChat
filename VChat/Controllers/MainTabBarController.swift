@@ -34,7 +34,7 @@ class MainTabBarController: UITabBarController {
         
         viewControllers = [
             generateNavigationController(rootViewController: peopleViewController, title: "People", image: peopleImage),
-            generateNavigationController(rootViewController: listViewController, title: "Conversations", image: convImage)
+            generateNavigationController(rootViewController: listViewController, title: "Chats", image: convImage)
         ]
     }
     

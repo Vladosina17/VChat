@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>918095370056-lkjg4fl7dksf0h3ohun2uc3f6m4j5pp9.apps.googleusercontent.com</string>
+	<string>663289628465-9nm4q7ri3fuouc377tgp4fn4qi2mhcus.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.918095370056-lkjg4fl7dksf0h3ohun2uc3f6m4j5pp9</string>
+	<string>com.googleusercontent.apps.663289628465-9nm4q7ri3fuouc377tgp4fn4qi2mhcus</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDC5gu4MTm2fnU4yWrEilQ0RCvxmTgHbH8</string>
+	<string>AIzaSyDnjsnIZJRYE0Mn1gmcTEAYOJcCYlxlkn8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>918095370056</string>
+	<string>663289628465</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.apress.VChat</string>
 	<key>PROJECT_ID</key>
-	<string>vchat-ce4f5</string>
+	<string>vchat-141e5</string>
 	<key>STORAGE_BUCKET</key>
-	<string>vchat-ce4f5.appspot.com</string>
+	<string>vchat-141e5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:918095370056:ios:1de08471c203500be8457d</string>
+	<string>1:663289628465:ios:4646c5e02b411f0f4a9210</string>
 	<key>DATABASE_URL</key>
-	<string>https://vchat-ce4f5.firebaseio.com</string>
+	<string>https://vchat-141e5.firebaseio.com</string>
 </dict>
 </plist>
