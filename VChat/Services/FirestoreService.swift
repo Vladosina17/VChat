@@ -76,30 +76,6 @@ class FirestoreService {
         } // StorageService
     } // saveProfileWith
     
-//    func createActiveChat(message: String, receiver: MUser, completion: @escaping (Result<Void, Error>) -> Void) {
-//        let reference = usersRef.document(receiver.id).collection("activeChats")
-//        let messageRef = reference.document(currentUser.id).collection("messages")
-//
-//        let message = MMessage(user: currentUser, content: message)
-//        let chat = MChat(friendUsername: currentUser.username,
-//                         friendAvatarStringURL: currentUser.avatarStringURL,
-//                         friendId: currentUser.id, lastMessageContent: message.content)
-//
-//        reference.document(currentUser.id).setData(chat.representation) { (error) in
-//            if let error = error {
-//                completion(.failure(error))
-//                return
-//            }
-//            messageRef.addDocument(data: message.representation) { (error) in
-//                if let error = error {
-//                    completion(.failure(error))
-//                    return
-//                }
-//                completion(.success(Void()))
-//            }
-//        }
-//    }
-    
     func createActiveChat(currentUser: MUser ,message: String, receiver: MUser, completion: @escaping (Result<Void, Error>) -> Void) {
         let reference = usersRef.document(receiver.id).collection("activeChats")
         let messageRef = reference.document(currentUser.id).collection("messages")
