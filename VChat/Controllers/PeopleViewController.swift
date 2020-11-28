@@ -207,7 +207,7 @@ extension PeopleViewController: UISearchBarDelegate {
 extension PeopleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let user = self.dataSource.itemIdentifier(for: indexPath) else { return }
-        let profileVC = ProfileViewController(user: user)
+        let profileVC = ProfileViewController(user: user, currentUser: currentUser)
         present(profileVC, animated: true, completion: nil)
     }
 }

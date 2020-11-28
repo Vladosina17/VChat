@@ -17,9 +17,11 @@ class ProfileViewController: UIViewController {
     let myTextField = InsertableTextField()
     
     private let user: MUser
+    private let currentUser: MUser
     
-    init(user: MUser) {
+    init(user: MUser, currentUser: MUser) {
         self.user = user
+        self.currentUser = currentUser
         self.nameLabel.text = user.username
         self.aboutMeLabel.text = user.description
         self.imageView.sd_setImage(with: URL(string: user.avatarStringURL), completed: nil)
@@ -65,7 +67,7 @@ class ProfileViewController: UIViewController {
         guard let message = myTextField.text, message != "" else { return }
         
         self.dismiss(animated: true) {
-            FirestoreService.shared.createActiveChat(message: message, receiver: self.user) { (result) in
+            FirestoreService.shared.createActiveChat(currentUser: self.currentUser, message: message, receiver: self.user) { (result) in
                 switch result {
                 
                 case .success():
